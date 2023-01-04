@@ -323,6 +323,12 @@ COPY_EXISTING ~SCRL2I.ITM~ ~override/WISCRL02.itm~
 	SAY NAME2 @112
 	SAY DESC @113
 	SAY UNIDENTIFIED_DESC @113
+
+COPY ~Blackhearts_BG1/items/WIMISC04.itm~ ~override/WIMISC04.itm~
+	SAY NAME1 @3324
+	SAY NAME2 @3324
+	SAY UNIDENTIFIED_DESC @3325
+	SAY DESC @3325
 	
 COPY ~Blackhearts_BG1/items/WIMACE01.itm~ ~override/WIMACE01.itm~
 	SAY NAME2 @116
@@ -485,6 +491,9 @@ WRITE_ASCII DIALOG ~WIPresfi~
 COPY ~Blackhearts_BG1/CRE/WIHOBG01.cre~ ~override/WIHOBG01.cre~
 COPY ~Blackhearts_BG1/CRE/WIHOBG02.cre~ ~override/WIHOBG02.cre~
 COPY ~Blackhearts_BG1/CRE/WIHOBG03.cre~ ~override/WIHOBG03.cre~
+
+COPY_EXISTING ~ARDENO.cre~ ~override/ARDENO.cre~
+ADD_CRE_ITEM ~WIMISC04~ #0 #0 #0 ~IDENTIFIED~ ~INV~
 
 COPY ~Blackhearts_BG1/CRE/WIBORT.cre~ ~override/WIBORT.cre~
 	SAY NAME1 @44
