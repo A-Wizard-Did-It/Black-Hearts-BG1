@@ -1,0 +1,814 @@
+BACKUP ~Blackhearts_BG1/Backup~
+AUTHOR ~AWizardDidIt~
+
+VERSION ~v1.0~
+
+LANGUAGE
+	~English~
+	~English~
+	
+~Blackhearts_BG1/tra/English/BHBG1setup.tra~
+~Blackhearts_BG1/tra/English/BHBG1names.tra~
+~Blackhearts_BG1/tra/English/BHBG1sounds.tra~
+~Blackhearts_BG1/tra/English/BHBG1quests.tra~
+~Blackhearts_BG1/tra/English/BHBG1items.tra~
+~Blackhearts_BG1/tra/English/BHBG1script.tra~
+
+BEGIN @1
+
+ADD_JOURNAL @15 @20 @25 @28 @39 @63 @70 @74 @75 @77 @87 @88 @105 @107 @114 @123 @124 @133 @152 USING ~Blackhearts_BG1/English/BHBG1quests.tra~
+
+COMPILE "Blackhearts_BG1/Dialog/" USING ~Blackhearts_BG1/tra/%LANGUAGE%/BHBG1script.tra~
+
+COPY ~Blackhearts_BG1/WAV~ "override"
+
+COPY ~Blackhearts_BG1/Areas/ARE~ "override"
+COPY ~Blackhearts_BG1/Areas/WED~ "override"
+COPY ~Blackhearts_BG1/Areas/BCS~ "override"
+COPY ~Blackhearts_BG1/Areas/BMP~ "override"
+COPY ~Blackhearts_BG1/Areas/MOS~ "override"
+COPY ~Blackhearts_BG1/Areas/TIS~ "override"
+COPY ~Blackhearts_BG1/Areas/PVRZ~ "override"
+
+COPY ~Blackhearts_BG1/Areas/WI0008.are~ ~override~
+SAY 0x180 ~This bridge fades into nothingness up ahead. Perhaps it once led somewhere, yet you cannot fathom where.~
+SAY 0x244 ~The hairs on your skin stick up as the green light from this crystal touches you. You decide it’s probably best not to touch or get too much closer to it.~
+SAY 0x308 ~An unnerving face rests in the trunk of this tree. It’s mouth is open, as if to tell you something urgent, yet it produces no sound.~
+SAY 0x3cc ~The door here is sealed tight and resists any attempt to open it. You will have to find a way to bypass the wards that have been placed on it.~
+
+COPY ~Blackhearts_BG1/Areas/WI0009.are~ ~override~
+SAY 0x6dc ~The hairs on your skin stick up as the yellow light from this crystal touches you. You decide it’s probably best not to touch or get too much closer to it.~
+
+COPY ~Blackhearts_BG1/Graphics~ "override"
+
+LAF HANDLE_AUDIO END
+
+COPY_EXISTING ~AR2800.are~ "override"
+  LPF fj_are_structure
+    INT_VAR
+    fj_type         = 2   
+    fj_box_left     = 4513
+    fj_box_top      = 1456
+    fj_box_right    = 4644 
+    fj_box_bottom   = 1556 
+    fj_cursor_idx   = 42
+    fj_vertex_0     = 4513 + (1456 << 16) 
+    fj_vertex_1     = 4644 + (1456 << 16)
+    fj_vertex_2     = 4644 + (1556 << 16)
+    fj_vertex_3     = 4513 + (1556 << 16)
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = WIhidcave
+    fj_destination_area = WI0002
+    fj_destination_name = EXIT1900
+  END
+ 
+   LPF fj_are_structure
+    INT_VAR
+    fj_loc_x       = 4575 
+    fj_loc_y       = 1482 
+    fj_orientation = 0  
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = EXITWi0002
+  END
+
+
+COPY_EXISTING ~AR0400.are~ "override"
+  LPF fj_are_structure
+    INT_VAR
+    fj_type         = 2    
+    fj_box_left     = 2304  
+    fj_box_top      = 8
+    fj_box_right    = 3408 
+    fj_box_bottom   = 123
+    fj_cursor_idx   = 34   
+    fj_vertex_0     = 2304 + (8 << 16) 
+    fj_vertex_1     = 3408 + (8 << 16)
+    fj_vertex_2     = 3408 + (123 << 16)
+    fj_vertex_3     = 2304 + (123 << 16)
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = WIgorgeEnt 
+    fj_destination_area = WI0003
+    fj_destination_name = Entrance1 
+  END
+
+   LPF fj_are_structure
+    INT_VAR
+    fj_loc_x       = 2550 
+    fj_loc_y       = 177 
+    fj_orientation = 0   
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = WIfarmtrav
+  END
+  
+  ADD_MAP_NOTE #2857 #66 ~gray~
+  @79
+
+
+COPY_EXISTING ~AR0226.are~ "override"
+  LPF fj_are_structure
+    INT_VAR
+    fj_type         = 2    
+    fj_box_left     = 36
+    fj_box_top      = 2522
+    fj_box_right    = 355
+    fj_box_bottom   = 2685
+    fj_cursor_idx   = 42
+    fj_vertex_0     = 36 + (2522 << 16) 
+    fj_vertex_1     = 355 + (2522 << 16)
+    fj_vertex_2     = 355 + (2685 << 16)
+    fj_vertex_3     = 36 + (2685 << 16)
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = WISewExit 
+    fj_destination_area = WI0006
+    fj_destination_name = Entrance1 
+  END
+
+   LPF fj_are_structure
+    INT_VAR
+    fj_loc_x       = 523
+    fj_loc_y       = 2694 
+    fj_orientation = 12
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = WIRedWiExit
+  END
+  
+
+
+COMPILE ~Blackhearts_BG1/Scripts/GENTLSUM.baf~
+COMPILE ~Blackhearts_BG1/Scripts/PRESFIEL.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIILLSP.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts0.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts1.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts2.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts3.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts4.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts5.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts6.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts7.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts8.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts9.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts10.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts11.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts12.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts13.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts14.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts15.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts16.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts17.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts18.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts19.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts20.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts21.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts22.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts23.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts24.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts25.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIcuts26.baf~
+
+COPY ~Blackhearts_BG1/Scripts/WISIGHT.BCS~ ~override/WISIGHT.BCS~
+COPY ~Blackhearts_BG1/Scripts/WISHOUT.BCS~ ~override/WISHOUT.BCS~
+COPY ~Blackhearts_BG1/Scripts/WI0002.BCS~ ~override/WI0002.BCS~
+COPY ~Blackhearts_BG1/Scripts/WI0003.BCS~ ~override/WI0003.BCS~
+COPY ~Blackhearts_BG1/Scripts/WI0005.BCS~ ~override/WI0005.BCS~
+COPY ~Blackhearts_BG1/Scripts/WI0006.BCS~ ~override/WI0006.BCS~
+COPY ~Blackhearts_BG1/Scripts/WI0007.BCS~ ~override/WI0007.BCS~
+COPY ~Blackhearts_BG1/Scripts/PRESFIEL.BCS~ ~override/PRESFIEL.BCS~
+COPY ~Blackhearts_BG1/Scripts/WIRIEZEN.BCS~ ~override/WIRIEZEN.BCS~
+COPY ~Blackhearts_BG1/Scripts/WINIGKNI.BCS~ ~override/WINIGKNI.BCS~
+COPY ~Blackhearts_BG1/Scripts/WITALK.BCS~ ~override/WITALK.BCS~
+COPY ~Blackhearts_BG1/Scripts/WITROL01.BCS~ ~override/WITROL01.BCS~
+COPY ~Blackhearts_BG1/Scripts/WIMITRAP.BCS~ ~override/WIMITRAP.BCS~
+COPY ~Blackhearts_BG1/Scripts/WISHTRAP.BCS~ ~override/WISHTRAP.BCS~
+COPY ~Blackhearts_BG1/Scripts/WISATRAP.BCS~ ~override/WISATRAP.BCS~
+COPY ~Blackhearts_BG1/Scripts/WIMIMIC.BCS~ ~override/WIMIMIC.BCS~
+COPY ~Blackhearts_BG1/Scripts/WICHDETH.BCS~ ~override/WICHDETH.BCS~
+COPY ~Blackhearts_BG1/Scripts/WIILLIMG.BCS~ ~override/WIILLIMG.BCS~
+
+COPY ~Blackhearts_BG1/items/WIRING01.itm~ ~override/WIRING01.itm~
+	SAY NAME2 @37
+	SAY DESC @38
+
+COPY ~Blackhearts_BG1/items/WIBAG01.itm~ ~override/WIBAG01.itm~
+	SAY NAME1 @31
+	SAY NAME2 @31
+	SAY DESC @32
+	SAY UNIDENTIFIED_DESC @32
+
+COPY ~Blackhearts_BG1/items/WIHELM01.itm~ ~override/WIHELM01.itm~
+	SAY NAME1 @16
+	SAY NAME2 @18
+	SAY UNIDENTIFIED_DESC @17
+	SAY DESC @19
+	
+COPY ~Blackhearts_BG1/items/WISW1H01.itm~ ~override/WISW1H01.itm~
+	SAY NAME2 @22
+	SAY DESC @23
+	
+COPY ~Blackhearts_BG1/items/WISW1H02.itm~ ~override/WISW1H02.itm~
+	SAY NAME2 @62
+	SAY DESC @63	
+	
+COPY ~Blackhearts_BG1/items/WIBOOK01.itm~ ~override/WIBOOK01.itm~
+	SAY NAME1 @26
+	SAY NAME2 @26
+	SAY UNIDENTIFIED_DESC @27
+	SAY DESC @27
+	
+COPY ~Blackhearts_BG1/items/WIBOOK02.itm~ ~override/WIBOOK02.itm~	
+	SAY NAME1 @33
+	SAY NAME2 @33
+	SAY UNIDENTIFIED_DESC @34
+	SAY DESC @34
+	
+COPY ~Blackhearts_BG1/items/WIBOOK03.itm~ ~override/WIBOOK03.itm~	
+	SAY NAME1 @35
+	SAY NAME2 @35
+	SAY UNIDENTIFIED_DESC @36
+	SAY DESC @36
+	
+COPY ~Blackhearts_BG1/items/WIMISC01.itm~ ~override/WIMISC01.itm~	
+	SAY NAME1 @42
+	SAY NAME2 @42
+	SAY UNIDENTIFIED_DESC @43
+	SAY DESC @43
+	
+COPY ~Blackhearts_BG1/items/WIMISC02.itm~ ~override/WIMISC02.itm~
+	SAY NAME1 @59
+	SAY NAME2 @59
+	SAY UNIDENTIFIED_DESC @60
+	SAY DESC @60
+	
+COPY ~Blackhearts_BG1/items/WIMISC05.itm~ ~override/WIMISC05.itm~
+	SAY UNIDENTIFIED_DESC @71
+	SAY DESC @71
+	
+COPY ~Blackhearts_BG1/items/WIARMO01.itm~ ~override/WIARMO01.itm~
+	SAY NAME2 @80
+	SAY DESC @81
+
+COPY ~Blackhearts_BG1/items/WIAMUL01.itm~ ~override/WIAMUL01.itm~
+	SAY NAME2 @82
+	SAY DESC @83
+	
+COPY ~Blackhearts_BG1/items/WIBOOT01.itm~ ~override/WIBOOT01.itm~
+	SAY NAME2 @155
+	SAY DESC @156
+	
+COPY ~Blackhearts_BG1/items/WIAMUL02.itm~ ~override/WIAMUL02.itm~
+	SAY NAME1 @89
+	SAY NAME2 @89
+
+COPY ~Blackhearts_BG1/items/WIBOOK04.itm~ ~override/WIBOOK04.itm~
+	SAY NAME1 @84
+	SAY NAME2 @84
+	SAY DESC @85
+	SAY UNIDENTIFIED_DESC @85
+	
+COPY ~Blackhearts_BG1/items/WIBOOK04.itm~ ~override/WIBOOK06.itm~
+	SAY NAME1 @165
+	SAY NAME2 @165
+	SAY DESC @166
+	SAY UNIDENTIFIED_DESC @166
+
+COPY ~Blackhearts_BG1/items/WISW1H03.itm~ ~override/WISW1H03.itm~
+	SAY NAME2 @92
+	SAY DESC @93
+	
+COPY_EXISTING ~SCRL2I.ITM~ ~override/WISCRL01.itm~
+	SAY NAME1 @90
+	SAY NAME2 @90
+	SAY DESC @91
+	SAY UNIDENTIFIED_DESC @91
+	
+COPY ~Blackhearts_BG1/items/WISPIDSW.itm~ ~override/WISPIDSW.itm~
+
+COPY ~Blackhearts_BG1/items/WIRING02.itm~ ~override/WIRING02.itm~
+	SAY NAME2 @94
+	SAY DESC @95
+	
+COPY ~Blackhearts_BG1/items/WIRING03.itm~ ~override/WIRING03.itm~	
+
+COPY ~Blackhearts_BG1/items/WIRING04.itm~ ~override/WIRING04.itm~	
+	
+COPY ~Blackhearts_BG1/items/WIBOOK05.itm~ ~override/WIBOOK05.itm~
+	SAY NAME1 @103
+	SAY NAME2 @103
+	SAY DESC @104
+	SAY UNIDENTIFIED_DESC @104
+	
+COPY ~Blackhearts_BG1/items/WIHELM02.itm~ ~override/WIHELM02.itm~
+	SAY NAME2 @108
+	SAY DESC @109
+	
+COPY ~Blackhearts_BG1/items/WIMISC06.itm~ ~override/WIMISC06.itm~
+	SAY NAME1 @110
+	SAY NAME2 @110
+	SAY UNIDENTIFIED_DESC @111
+	SAY DESC @111
+	
+COPY ~Blackhearts_BG1/items/WIMISC12.itm~ ~override/WIMISC12.itm~
+	SAY NAME1 @153
+	SAY NAME2 @153
+	SAY UNIDENTIFIED_DESC @154
+	SAY DESC @154
+	
+COPY_EXISTING ~SCRL2I.ITM~ ~override/WISCRL02.itm~
+	SAY NAME1 @112
+	SAY NAME2 @112
+	SAY DESC @113
+	SAY UNIDENTIFIED_DESC @113
+	
+COPY ~Blackhearts_BG1/items/WIMACE01.itm~ ~override/WIMACE01.itm~
+	SAY NAME2 @116
+	SAY DESC @117
+	
+COPY ~Blackhearts_BG1/items/WIARMO02.itm~ ~override/WIARMO02.itm~
+	SAY NAME2 @137
+	SAY DESC @138
+	
+COPY ~Blackhearts_BG1/items/WISPER01.itm~ ~override/WISPER01.itm~
+	SAY NAME2 @139
+	SAY DESC @140
+
+COPY ~Blackhearts_BG1/items/WISTAF01.itm~ ~override/WISTAF01.itm~
+	SAY NAME2 @141
+	SAY DESC @142	
+	
+COPY ~Blackhearts_BG1/items/WISW1H05.itm~ ~override/WISW1H05.itm~
+	SAY NAME2 @146
+	SAY DESC @147
+	
+COPY ~Blackhearts_BG1/items/WISW1H06.itm~ ~override/WISW1H06.itm~
+	SAY NAME2 @148
+	SAY DESC @149
+
+COPY ~Blackhearts_BG1/items/WIROBE01.itm~ ~override/WIROBE01.itm~
+	SAY NAME2 @150
+	SAY DESC @151
+	
+COPY ~Blackhearts_BG1/items/WISHLD01.itm~ ~override/WISHLD01.itm~
+	SAY NAME2 @163
+	SAY DESC @164
+	
+COPY ~Blackhearts_BG1/items/WISW1H04.itm~ ~override/WISW1H04.itm~
+	SAY NAME1 @118
+	SAY NAME2 @119
+	SAY UNIDENTIFIED_DESC @120
+	SAY DESC @121
+
+COPY ~Blackhearts_BG1/items/WIMISC07.itm~ ~override/WIMISC07.itm~
+	SAY NAME1 @125
+	SAY NAME2 @125
+	SAY UNIDENTIFIED_DESC @126
+	SAY DESC @126
+	
+COPY ~Blackhearts_BG1/items/WIMISC08.itm~ ~override/WIMISC08.itm~
+	SAY NAME1 @127
+	SAY NAME2 @127
+	SAY UNIDENTIFIED_DESC @128
+	SAY DESC @128
+	
+COPY ~Blackhearts_BG1/items/WIMISC09.itm~ ~override/WIMISC09.itm~
+	SAY NAME1 @129
+	SAY NAME2 @129
+	SAY UNIDENTIFIED_DESC @130
+	SAY DESC @130
+	
+COPY ~Blackhearts_BG1/items/WIMISC10.itm~ ~override/WIMISC10.itm~
+	SAY NAME1 @131
+	SAY NAME2 @131
+	SAY UNIDENTIFIED_DESC @132
+	SAY DESC @132
+	
+COPY ~Blackhearts_BG1/items/WIMISC11.itm~ ~override/WIMISC11.itm~
+	SAY NAME1 @135
+	SAY NAME2 @135
+	SAY UNIDENTIFIED_DESC @136
+	SAY DESC @136
+
+COPY ~Blackhearts_BG1/CRE/WIILLASE.cre~ ~override/WIILLASE.cre~
+	SAY NAME1 @2
+	SAY NAME2 @2
+	SAY INITIAL_MEETING @12
+	SAY BATTLE_CRY1 @3
+	SAY BATTLE_CRY2 @4
+	SAY DAMAGE @5
+	SAY DYING @6
+	SAY MORALE @7
+	SAY SELECT_COMMON1 @12 
+	SAY SELECT_COMMON2 @8
+	SAY SELECT_COMMON3 @11
+	SAY SELECT_COMMON4 @9
+	SAY SELECT_COMMON5 @13
+	SAY SELECT_ACTION1 @14
+	SAY SELECT_ACTION2 @10
+WRITE_ASCII SCRIPT_OVERRIDE ~WIILLSP~
+WRITE_ASCII SCRIPT_DEFAULT ~WIillase~
+WRITE_ASCII DIALOG ~WIillase~
+WRITE_ASCII DEATHVAR ~WIILLASE~
+
+COPY ~Blackhearts_BG1/CRE/WIILLAS1.cre~ ~override/WIILLAS1.cre~
+	SAY NAME1 @68
+	SAY NAME2 @68
+	SAY INITIAL_MEETING @12
+	SAY BATTLE_CRY1 @3
+	SAY BATTLE_CRY2 @4
+	SAY DAMAGE @5
+	SAY DYING @6
+	SAY MORALE @7
+	SAY SELECT_COMMON1 @12 
+	SAY SELECT_COMMON2 @8
+	SAY SELECT_COMMON3 @11
+	SAY SELECT_COMMON4 @9
+	SAY SELECT_COMMON5 @13
+	SAY SELECT_ACTION1 @14
+	SAY SELECT_ACTION2 @10
+WRITE_ASCII SCRIPT_OVERRIDE ~WIILLIMG~	
+WRITE_ASCII DIALOG ~WIillimg~
+
+COPY ~Blackhearts_BG1/CRE/WIHOBG04.cre~ ~override/WIHOBG04.cre~
+	SAY NAME1 @21
+	SAY NAME2 @21
+
+COPY ~Blackhearts_BG1/CRE/WIELENAI.cre~ ~override/WIELENAI.cre~
+	SAY NAME1 @24
+	SAY NAME2 @24
+WRITE_ASCII SCRIPT_DEFAULT ~WIelenai~
+WRITE_ASCII DIALOG ~WIelenai~
+
+COPY_EXISTING ~AMNIS.cre~ ~override/WIGUARD.cre~
+	SAY NAME1 @29
+	SAY NAME2 @29
+WRITE_ASCII SCRIPT_DEFAULT ~WIguard~
+WRITE_ASCII DIALOG ~WIguard~
+
+COPY_EXISTING ~AMNIS.cre~ ~override/WIGUARD2.cre~
+	SAY NAME1 @29
+	SAY NAME2 @29
+WRITE_ASCII SCRIPT_DEFAULT ~WIguard~
+WRITE_ASCII DIALOG ~WIguard2~
+
+COPY_EXISTING ~BRILLA.cre~ ~override/BRILLA.cre~
+ADD_CRE_ITEM ~WIAMUL02~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+COPY_EXISTING ~FTOBE3.cre~ ~override/WIBARMAI.cre~
+	SAY NAME1 @64
+	SAY NAME2 @64
+WRITE_ASCII DIALOG ~WIBARMAI~
+WRITE_ASCII DEATHVAR ~WIBARMAI~
+
+COPY_EXISTING ~TAKIYAH.cre~ ~override/TAKIYAH.cre~
+WRITE_ASCII DEATHVAR ~TAKIYAH~
+
+COPY ~Blackhearts_BG1/CRE/WIGENTLE.cre~ ~override/WIGENTLE.cre~
+	SAY NAME1 @30
+	SAY NAME2 @30
+WRITE_ASCII DIALOG ~WIgent~
+WRITE_ASCII SCRIPT_OVERRIDE ~WISIGHT~
+
+COPY ~Blackhearts_BG1/CRE/WIPRESFI.cre~ ~override/WIPRESFI.cre~
+	SAY NAME1 @41
+	SAY NAME2 @41
+WRITE_ASCII DIALOG ~WIPresfi~
+
+COPY ~Blackhearts_BG1/CRE/WIPRESF2.cre~ ~override/WIPRESF2.cre~
+	SAY NAME1 @41
+	SAY NAME2 @41
+WRITE_ASCII DIALOG ~WIPresfi~
+
+COPY ~Blackhearts_BG1/CRE/WIHOBG01.cre~ ~override/WIHOBG01.cre~
+COPY ~Blackhearts_BG1/CRE/WIHOBG02.cre~ ~override/WIHOBG02.cre~
+COPY ~Blackhearts_BG1/CRE/WIHOBG03.cre~ ~override/WIHOBG03.cre~
+
+COPY ~Blackhearts_BG1/CRE/WIBORT.cre~ ~override/WIBORT.cre~
+	SAY NAME1 @44
+	SAY NAME2 @44
+
+COPY ~Blackhearts_BG1/CRE/WIAPPLE.cre~ ~override/WIAPPLE.cre~
+	SAY NAME1 @45
+	SAY NAME2 @45	
+
+COPY ~Blackhearts_BG1/CRE/WIERASMU.cre~ ~override/WIERASMU.cre~
+	SAY NAME1 @46
+	SAY NAME2 @46
+
+COPY ~Blackhearts_BG1/CRE/WIFARGUS.cre~ ~override/WIFARGUS.cre~
+	SAY NAME1 @47
+	SAY NAME2 @47
+
+COPY ~Blackhearts_BG1/CRE/WIREGINA.cre~ ~override/WIREGINA.cre~
+	SAY NAME1 @48
+	SAY NAME2 @48
+
+COPY ~Blackhearts_BG1/CRE/WITIM.cre~ ~override/WITIM.cre~
+	SAY NAME1 @49
+	SAY NAME2 @49	
+
+COPY ~Blackhearts_BG1/CRE/WILLYRK.cre~ ~override/WILLYRK.cre~
+	SAY NAME1 @50
+	SAY NAME2 @50	
+
+COPY ~Blackhearts_BG1/CRE/WISKEL.cre~ ~override/WISKEL.cre~
+COPY ~Blackhearts_BG1/CRE/WIOGRE01.cre~ ~override/WIOGRE01.cre~
+
+COPY ~Blackhearts_BG1/CRE/WICARLOS.cre~ ~override/WICARLOS.cre~
+	SAY NAME1 @53
+	SAY NAME2 @53
+	
+COPY ~Blackhearts_BG1/CRE/WICIRIL.cre~ ~override/WICIRIL.cre~
+	SAY NAME1 @54
+	SAY NAME2 @54	
+	
+COPY ~Blackhearts_BG1/CRE/WIKRANCO.cre~ ~override/WIKRANCO.cre~
+	SAY NAME1 @55
+	SAY NAME2 @55
+	
+COPY ~Blackhearts_BG1/CRE/WIOWYN.cre~ ~override/WIOWYN.cre~
+	SAY NAME1 @56
+	SAY NAME2 @56
+
+COPY ~Blackhearts_BG1/CRE/WIWYLLIA.cre~ ~override/WIWYLLIA.cre~
+	SAY NAME1 @57
+	SAY NAME2 @57
+
+COPY ~Blackhearts_BG1/CRE/WISAMJOH.cre~ ~override/WISAMJOH.cre~
+	SAY NAME1 @58
+	SAY NAME2 @58
+	
+COPY ~Blackhearts_BG1/CRE/WISHADO1.cre~ ~override/WISHADO1.cre~
+	SAY NAME1 @61
+	SAY NAME2 @61
+	
+COPY ~Blackhearts_BG1/CRE/WICOMM01.cre~ ~override/WICOMM01.cre~
+WRITE_ASCII DIALOG ~WICOMM01~
+WRITE_ASCII DEATHVAR ~WICOMM01~
+
+COPY ~Blackhearts_BG1/CRE/WICOMM01.cre~ ~override/WICOMM2.cre~
+WRITE_ASCII DIALOG ~WICOMM01~
+WRITE_ASCII DEATHVAR ~WICOMM02~
+
+COPY ~Blackhearts_BG1/CRE/WICOMM01.cre~ ~override/WICOMM3.cre~
+WRITE_ASCII DIALOG ~WICOMM01~
+WRITE_ASCII DEATHVAR ~WICOMM03~
+
+COPY ~Blackhearts_BG1/CRE/WIREDWIZ.cre~ ~override/WIREDWIZ.cre~
+	SAY NAME1 @69
+	SAY NAME2 @69
+WRITE_ASCII DIALOG ~WIREDWIZ~
+WRITE_ASCII DEATHVAR ~WIREDWIZ~
+
+COPY ~Blackhearts_BG1/CRE/WISPID01.cre~ ~override/WISPID01.cre~
+COPY ~Blackhearts_BG1/CRE/WISPID02.cre~ ~override/WISPID02.cre~
+
+COPY ~Blackhearts_BG1/CRE/WISPID03.cre~ ~override/WISPID03.cre~
+	SAY NAME1 @86
+	SAY NAME2 @86
+	
+COPY ~Blackhearts_BG1/CRE/WIAMARAN.cre~ ~override/WIAMARAN.cre~
+WRITE_ASCII DIALOG ~WIamaran~
+
+COPY ~Blackhearts_BG1/CRE/WIDRYAD1.cre~ ~override/WIDRYAD1.cre~
+	SAY NAME1 @72
+	SAY NAME2 @72
+WRITE_ASCII DIALOG ~WIDRYAD1~
+WRITE_ASCII DEATHVAR ~WIDRYAD1~
+
+COPY ~Blackhearts_BG1/CRE/WIDRYAD2.cre~ ~override/WIDRYAD2.cre~
+	SAY NAME1 @72
+	SAY NAME2 @72
+WRITE_ASCII DIALOG ~WIDRYAD2~
+WRITE_ASCII DEATHVAR ~WIDRYAD2~
+
+COPY ~Blackhearts_BG1/CRE/WIANKHE1.cre~ ~override/WIANKHE1.cre~
+	SAY NAME1 @73
+	SAY NAME2 @73
+	
+COPY_EXISTING ~THIEF.cre~ ~override/WITHIEF1.cre~
+WRITE_ASCII DIALOG ~WIthief1~
+
+COPY_EXISTING ~THIEF.cre~ ~override/WITHIEF2.cre~
+WRITE_ASCII DIALOG ~WIthief2~
+
+COPY ~Blackhearts_BG1/CRE/WINERYS.cre~ ~override/WINERYS.cre~
+	SAY NAME1 @76
+	SAY NAME2 @76
+	SAY INITIAL_MEETING @157
+	SAY DYING @159
+	SAY SELECT_COMMON1 @160
+	SAY SELECT_COMMON2 @161
+	SAY SELECT_COMMON3 @158
+WRITE_ASCII DIALOG ~WINerys~
+WRITE_ASCII DEATHVAR ~WINerys~
+
+COPY_EXISTING ~WINERYS.cre~ ~override/WINERY2.cre~
+WRITE_ASCII SCRIPT_OVERRIDE ~INITDLG~
+
+COPY ~Blackhearts_BG1/CRE/WIRIEZEN.cre~ ~override/WIRIEZEN.cre~
+	SAY NAME1 @78
+	SAY NAME2 @78
+WRITE_ASCII DIALOG ~WIRiezen~
+WRITE_ASCII DEATHVAR ~WIRIEZEN~
+
+COPY ~Blackhearts_BG1/CRE/WINIKN01.cre~ ~override/WINIKN01.cre~
+COPY ~Blackhearts_BG1/CRE/WINIKN02.cre~ ~override/WINIKN02.cre~
+COPY ~Blackhearts_BG1/CRE/WISHADO2.cre~ ~override/WISHADO2.cre~
+
+COPY ~Blackhearts_BG1/CRE/WINIKN03.cre~ ~override/WINIKN03.cre~
+WRITE_ASCII DIALOG ~WINIGKNI~
+
+COPY ~Blackhearts_BG1/CRE/WIOGMA01.cre~ ~override/WIOGMA01.cre~
+	SAY NAME1 @96
+	SAY NAME2 @96
+WRITE_ASCII DIALOG ~WIyondak~
+WRITE_ASCII DEATHVAR ~WIYONDAK~
+WRITE_ASCII SCRIPT_OVERRIDE ~SHOUTDLG~
+
+COPY ~Blackhearts_BG1/CRE/WIRWBARB.cre~ ~override/WIRWBARB.cre~
+	SAY NAME1 @97
+	SAY NAME2 @97
+WRITE_ASCII SCRIPT_OVERRIDE ~SHOUT~
+WRITE_ASCII DEATHVAR ~WIRWBARB~
+
+COPY ~Blackhearts_BG1/CRE/WIRWBARB.cre~ ~override/WIRWBAR2.cre~
+	SAY NAME1 @97
+	SAY NAME2 @97
+
+COPY ~Blackhearts_BG1/CRE/WIRWBKGD.cre~ ~override/WIRWBKGD.cre~
+	SAY NAME1 @98
+	SAY NAME2 @98
+WRITE_ASCII DEATHVAR ~WIRWBKGD~
+
+COPY ~Blackhearts_BG1/CRE/WIRWBKG2.cre~ ~override/WIRWBKG2.cre~
+	SAY NAME1 @122
+	SAY NAME2 @122
+WRITE_ASCII DIALOG ~WIKROTIA~
+WRITE_ASCII DEATHVAR ~WIRWBKG2~
+WRITE_ASCII SCRIPT_OVERRIDE ~SHOUTDLG~
+	
+COPY ~Blackhearts_BG1/CRE/WIRWCLER.cre~ ~override/WIRWCLER.cre~
+	SAY NAME1 @99
+	SAY NAME2 @99
+	
+COPY ~Blackhearts_BG1/CRE/WIRWTHIF.cre~ ~override/WIRWTHIF.cre~
+	SAY NAME1 @100
+	SAY NAME2 @100
+WRITE_ASCII SCRIPT_OVERRIDE ~SHOUT~
+WRITE_ASCII DEATHVAR ~WIRWTHIF~
+
+COPY ~Blackhearts_BG1/CRE/WIRWTHIF.cre~ ~override/WIRWTHI2.cre~
+	SAY NAME1 @100
+	SAY NAME2 @100
+	
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ2.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+WRITE_ASCII DEATHVAR ~WIRWWIZ2~
+
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ3.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+	
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ4.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+WRITE_ASCII DEATHVAR ~WIRWWIZ4~
+ADD_CRE_ITEM ~WIMISC08~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ5.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+WRITE_ASCII DEATHVAR ~WIRWWIZ5~
+ADD_CRE_ITEM ~WIMISC09~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ6.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+WRITE_ASCII DEATHVAR ~WIRWWIZ6~
+ADD_CRE_ITEM ~WIMISC10~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ2.cre~ ~override/WIRWWIZ7.cre~
+	SAY NAME1 @101
+	SAY NAME2 @101
+WRITE_ASCII DEATHVAR ~WIRWWIZ7~
+ADD_CRE_ITEM ~WIMISC11~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIRWWIZ1.cre~ ~override/WIRWWIZ1.cre~
+	SAY NAME1 @102
+	SAY NAME2 @102
+WRITE_ASCII DIALOG ~WImalach~
+WRITE_ASCII DEATHVAR ~WIMALACH~
+	
+COPY ~Blackhearts_BG1/CRE/WICHERIS.cre~ ~override/WICHERIS.cre~
+	SAY NAME1 @106
+	SAY NAME2 @106
+WRITE_ASCII DIALOG ~WICheris~
+WRITE_ASCII DEATHVAR ~WICHERIS~
+
+COPY ~Blackhearts_BG1/CRE/WICHERI2.cre~ ~override/WICHERI2.cre~
+	SAY NAME1 @106
+	SAY NAME2 @106
+
+COPY ~Blackhearts_BG1/CRE/WITROLL.cre~ ~override/WITROLL.cre~
+	SAY NAME1 @115
+	SAY NAME2 @115
+	
+COPY ~Blackhearts_BG1/CRE/WIPORTA1.cre~ ~override/WIPORTA1.cre~
+COPY ~Blackhearts_BG1/CRE/WIPORTA2.cre~ ~override/WIPORTA2.cre~
+COPY ~Blackhearts_BG1/CRE/WIPORTA3.cre~ ~override/WIPORTA3.cre~
+COPY ~Blackhearts_BG1/CRE/WIPORTA4.cre~ ~override/WIPORTA4.cre~
+COPY ~Blackhearts_BG1/CRE/WIPORTA5.cre~ ~override/WIPORTA5.cre~
+
+COPY ~Blackhearts_BG1/CRE/WIMIMIC.cre~ ~override/WIMIMIC.cre~
+
+COPY ~Blackhearts_BG1/CRE/WICLAYGO.cre~ ~override/WICLAYGO.cre~
+
+COPY ~Blackhearts_BG1/CRE/WISHAMB.cre~ ~override/WISHAMB.cre~
+ADD_CRE_ITEM ~WISTAF01~ #0 #0 #0 ~none~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WISTOGOL.cre~ ~override/WISTOGOL.cre~
+COPY ~Blackhearts_BG1/CRE/WIICESAL.cre~ ~override/WIICESAL.cre~
+
+COPY ~Blackhearts_BG1/CRE/WIICESCL.cre~ ~override/WIICESCL.cre~
+ADD_CRE_ITEM ~WISPER01~ #0 #0 #0 ~none~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIELFIR1.cre~ ~override/WIELFIR1.cre~
+
+COPY_EXISTING ~BEGBAX_A.cre~ ~override/WIBEGG01.cre~
+WRITE_ASCII DIALOG ~WIbeggar~
+WRITE_ASCII DEATHVAR ~WIBEGG01~
+
+COPY ~Blackhearts_BG1/CRE/WIFIRGIA.cre~ ~override/WIFIRGIA.cre~
+	SAY NAME1 @134
+	SAY NAME2 @134
+WRITE_ASCII DIALOG ~WIFIREGI~
+WRITE_ASCII DEATHVAR ~WIFIREGI~
+WRITE_ASCII SCRIPT_OVERRIDE ~WIFIREGI~
+
+COPY ~Blackhearts_BG1/CRE/WIFIRGI2.cre~ ~override/WIFIRGI2.cre~
+	SAY NAME1 @134
+	SAY NAME2 @134
+WRITE_ASCII DIALOG ~WIFIREG2~
+WRITE_ASCII DEATHVAR ~WIFIREG2~
+WRITE_ASCII SCRIPT_OVERRIDE ~SHOUTDLG~
+ADD_CRE_ITEM ~WIARMO02~ #0 #0 #0 ~none~ ~INV~
+
+COPY ~Blackhearts_BG1/CRE/WIPORT.cre~ ~override/WIPORT.cre~
+	SAY NAME1 @143
+	SAY NAME2 @143
+WRITE_ASCII DIALOG ~WIPORTAL~
+WRITE_ASCII SCRIPT_OVERRIDE ~WIPORT~
+
+COPY ~Blackhearts_BG1/CRE/WITHARDE.cre~ ~override/WITHARDE.cre~
+	SAY NAME1 @144
+	SAY NAME2 @144
+
+COPY ~Blackhearts_BG1/CRE/WIELAN.cre~ ~override/WIELAN.cre~
+	SAY NAME1 @145
+	SAY NAME2 @145
+
+COPY_EXISTING ~NEGOB03.cre~ ~override/WIJELLY.cre~
+	SAY NAME1 @162
+	SAY NAME2 @162
+WRITE_ASCII DIALOG ~WIYUJEHL~
+
+COPY ~Blackhearts_BG1/CRE/WIPINATA.cre~ ~override/WIPINATA.cre~
+WRITE_ASCII DEATHVAR ~WIPINATA~
+ADD_CRE_ITEM ~WISHLD01~ #0 #0 #0 ~none~ ~INV~
+
+EXTEND_TOP ~AR0112.bcs~ ~Blackhearts_BG1/Scripts/AR0112.baf~
+EXTEND_TOP ~AR0123.bcs~ ~Blackhearts_BG1/Scripts/AR0123.baf~
+EXTEND_TOP ~AR0125.bcs~ ~Blackhearts_BG1/Scripts/AR0125.baf~
+EXTEND_TOP ~AR0200.bcs~ ~Blackhearts_BG1/Scripts/AR0200.baf~
+EXTEND_TOP ~AR3401.bcs~ ~Blackhearts_BG1/Scripts/AR3401.baf~
+EXTEND_TOP ~AR3351.bcs~ ~Blackhearts_BG1/Scripts/AR3351.baf~
+EXTEND_TOP ~AR3700.bcs~ ~Blackhearts_BG1/Scripts/AR3700.baf~
+EXTEND_TOP ~AR3300.bcs~ ~Blackhearts_BG1/Scripts/AR3300.baf~
+EXTEND_TOP ~AR5403.bcs~ ~Blackhearts_BG1/Scripts/AR5403.baf~
+EXTEND_TOP ~AR5402.bcs~ ~Blackhearts_BG1/Scripts/AR5402.baf~
+EXTEND_TOP ~AR5401.bcs~ ~Blackhearts_BG1/Scripts/AR5401.baf~
+EXTEND_TOP ~AR2700.bcs~ ~Blackhearts_BG1/Scripts/AR2700.baf~
+EXTEND_TOP ~WISIGHT.bcs~ ~Blackhearts_BG1/Scripts/GENTLSUM.baf~
+EXTEND_TOP ~AR2800.bcs~ ~Blackhearts_BG1/Scripts/AR2800.baf~
+EXTEND_TOP ~PRESFIEL.bcs~ ~Blackhearts_BG1/Scripts/PRESFIEL.baf~
+EXTEND_TOP ~AR0800.bcs~ ~Blackhearts_BG1/Scripts/AR0800.baf~
+EXTEND_TOP ~AR0705.bcs~ ~Blackhearts_BG1/Scripts/AR0705.baf~
+EXTEND_TOP ~AR0706.bcs~ ~Blackhearts_BG1/Scripts/AR0706.baf~
+EXTEND_TOP ~AR1600.bcs~ ~Blackhearts_BG1/Scripts/AR1600.baf~
+EXTEND_TOP ~AR2400.bcs~ ~Blackhearts_BG1/Scripts/AR2400.baf~
+EXTEND_TOP ~AR0119.bcs~ ~Blackhearts_BG1/Scripts/AR0119.baf~
+EXTEND_TOP ~AR0167.bcs~ ~Blackhearts_BG1/Scripts/AR0167.baf~
+EXTEND_TOP ~AR0700.bcs~ ~Blackhearts_BG1/Scripts/AR0700.baf~
+EXTEND_TOP ~AR1208.bcs~ ~Blackhearts_BG1/Scripts/AR1208.baf~
+EXTEND_TOP ~AR0226.bcs~ ~Blackhearts_BG1/Scripts/AR0226.baf~
+EXTEND_TOP ~WI0008.bcs~ ~Blackhearts_BG1/Scripts/WI0008.baf~
+EXTEND_TOP ~WI0009.bcs~ ~Blackhearts_BG1/Scripts/WI0009.baf~
+EXTEND_TOP ~WI0010.bcs~ ~Blackhearts_BG1/Scripts/WI0010.baf~
+
+APPEND ~mastarea.2da~
+~WI0003  value~
