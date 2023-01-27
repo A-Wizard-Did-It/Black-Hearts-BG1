@@ -170,25 +170,52 @@ COMPILE ~Blackhearts_BG1/Scripts/WIcuts23.baf~
 COMPILE ~Blackhearts_BG1/Scripts/WIcuts24.baf~
 COMPILE ~Blackhearts_BG1/Scripts/WIcuts25.baf~
 COMPILE ~Blackhearts_BG1/Scripts/WIcuts26.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WISIGHT.baf~
+COMPILE ~Blackhearts_BG1/Scripts/PRESFIEL.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIRIEZEN.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WINIGKNI.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WITALK.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WITROL01.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIMITRAP.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WISHTRAP.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WISATRAP.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIMIMIC.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WICHDETH.baf~
+COMPILE ~Blackhearts_BG1/Scripts/WIILLIMG.baf~
 
-COPY ~Blackhearts_BG1/Scripts/WISIGHT.BCS~ ~override/WISIGHT.BCS~
-COPY ~Blackhearts_BG1/Scripts/WISHOUT.BCS~ ~override/WISHOUT.BCS~
-COPY ~Blackhearts_BG1/Scripts/WI0002.BCS~ ~override/WI0002.BCS~
-COPY ~Blackhearts_BG1/Scripts/WI0003.BCS~ ~override/WI0003.BCS~
-COPY ~Blackhearts_BG1/Scripts/WI0005.BCS~ ~override/WI0005.BCS~
-COPY ~Blackhearts_BG1/Scripts/WI0006.BCS~ ~override/WI0006.BCS~
-COPY ~Blackhearts_BG1/Scripts/WI0007.BCS~ ~override/WI0007.BCS~
-COPY ~Blackhearts_BG1/Scripts/PRESFIEL.BCS~ ~override/PRESFIEL.BCS~
-COPY ~Blackhearts_BG1/Scripts/WIRIEZEN.BCS~ ~override/WIRIEZEN.BCS~
-COPY ~Blackhearts_BG1/Scripts/WINIGKNI.BCS~ ~override/WINIGKNI.BCS~
-COPY ~Blackhearts_BG1/Scripts/WITALK.BCS~ ~override/WITALK.BCS~
-COPY ~Blackhearts_BG1/Scripts/WITROL01.BCS~ ~override/WITROL01.BCS~
-COPY ~Blackhearts_BG1/Scripts/WIMITRAP.BCS~ ~override/WIMITRAP.BCS~
-COPY ~Blackhearts_BG1/Scripts/WISHTRAP.BCS~ ~override/WISHTRAP.BCS~
-COPY ~Blackhearts_BG1/Scripts/WISATRAP.BCS~ ~override/WISATRAP.BCS~
-COPY ~Blackhearts_BG1/Scripts/WIMIMIC.BCS~ ~override/WIMIMIC.BCS~
-COPY ~Blackhearts_BG1/Scripts/WICHDETH.BCS~ ~override/WICHDETH.BCS~
-COPY ~Blackhearts_BG1/Scripts/WIILLIMG.BCS~ ~override/WIILLIMG.BCS~
+EXTEND_TOP ~AR0112.bcs~ ~Blackhearts_BG1/Scripts/AR0112.baf~
+EXTEND_TOP ~AR0123.bcs~ ~Blackhearts_BG1/Scripts/AR0123.baf~
+EXTEND_TOP ~AR0125.bcs~ ~Blackhearts_BG1/Scripts/AR0125.baf~
+EXTEND_TOP ~AR0200.bcs~ ~Blackhearts_BG1/Scripts/AR0200.baf~
+EXTEND_TOP ~AR3401.bcs~ ~Blackhearts_BG1/Scripts/AR3401.baf~
+EXTEND_TOP ~AR3351.bcs~ ~Blackhearts_BG1/Scripts/AR3351.baf~
+EXTEND_TOP ~AR3700.bcs~ ~Blackhearts_BG1/Scripts/AR3700.baf~
+EXTEND_TOP ~AR3300.bcs~ ~Blackhearts_BG1/Scripts/AR3300.baf~
+EXTEND_TOP ~AR5403.bcs~ ~Blackhearts_BG1/Scripts/AR5403.baf~
+EXTEND_TOP ~AR5402.bcs~ ~Blackhearts_BG1/Scripts/AR5402.baf~
+EXTEND_TOP ~AR5401.bcs~ ~Blackhearts_BG1/Scripts/AR5401.baf~
+EXTEND_TOP ~AR2700.bcs~ ~Blackhearts_BG1/Scripts/AR2700.baf~
+EXTEND_TOP ~AR2800.bcs~ ~Blackhearts_BG1/Scripts/AR2800.baf~
+EXTEND_TOP ~AR0800.bcs~ ~Blackhearts_BG1/Scripts/AR0800.baf~
+EXTEND_TOP ~AR0705.bcs~ ~Blackhearts_BG1/Scripts/AR0705.baf~
+EXTEND_TOP ~AR0706.bcs~ ~Blackhearts_BG1/Scripts/AR0706.baf~
+EXTEND_TOP ~AR1600.bcs~ ~Blackhearts_BG1/Scripts/AR1600.baf~
+EXTEND_TOP ~AR2400.bcs~ ~Blackhearts_BG1/Scripts/AR2400.baf~
+EXTEND_TOP ~AR0119.bcs~ ~Blackhearts_BG1/Scripts/AR0119.baf~
+EXTEND_TOP ~AR0167.bcs~ ~Blackhearts_BG1/Scripts/AR0167.baf~
+EXTEND_TOP ~AR0700.bcs~ ~Blackhearts_BG1/Scripts/AR0700.baf~
+EXTEND_TOP ~AR1208.bcs~ ~Blackhearts_BG1/Scripts/AR1208.baf~
+EXTEND_TOP ~AR0226.bcs~ ~Blackhearts_BG1/Scripts/AR0226.baf~
+EXTEND_TOP ~WI0002.bcs~ ~Blackhearts_BG1/Scripts/WI0002.baf~
+EXTEND_TOP ~WI0003.bcs~ ~Blackhearts_BG1/Scripts/WI0003.baf~
+EXTEND_TOP ~WI0005.bcs~ ~Blackhearts_BG1/Scripts/WI0005.baf~
+EXTEND_TOP ~WI0006.bcs~ ~Blackhearts_BG1/Scripts/WI0006.baf~
+EXTEND_TOP ~WI0007.bcs~ ~Blackhearts_BG1/Scripts/WI0007.baf~
+EXTEND_TOP ~WI0008.bcs~ ~Blackhearts_BG1/Scripts/WI0008.baf~
+EXTEND_TOP ~WI0009.bcs~ ~Blackhearts_BG1/Scripts/WI0009.baf~
+EXTEND_TOP ~WI0010.bcs~ ~Blackhearts_BG1/Scripts/WI0010.baf~
+
+COPY ~Blackhearts_BG1/Scripts/WISHOUT.bcs~ ~override/WISHOUT.bcs~
 
 COPY ~Blackhearts_BG1/items/WIRING01.itm~ ~override/WIRING01.itm~
 	SAY NAME2 @37
@@ -790,34 +817,8 @@ COPY ~Blackhearts_BG1/CRE/WIPINATA.cre~ ~override/WIPINATA.cre~
 WRITE_ASCII DEATHVAR ~WIPINATA~
 ADD_CRE_ITEM ~WISHLD01~ #0 #0 #0 ~none~ ~INV~
 
-EXTEND_TOP ~AR0112.bcs~ ~Blackhearts_BG1/Scripts/AR0112.baf~
-EXTEND_TOP ~AR0123.bcs~ ~Blackhearts_BG1/Scripts/AR0123.baf~
-EXTEND_TOP ~AR0125.bcs~ ~Blackhearts_BG1/Scripts/AR0125.baf~
-EXTEND_TOP ~AR0200.bcs~ ~Blackhearts_BG1/Scripts/AR0200.baf~
-EXTEND_TOP ~AR3401.bcs~ ~Blackhearts_BG1/Scripts/AR3401.baf~
-EXTEND_TOP ~AR3351.bcs~ ~Blackhearts_BG1/Scripts/AR3351.baf~
-EXTEND_TOP ~AR3700.bcs~ ~Blackhearts_BG1/Scripts/AR3700.baf~
-EXTEND_TOP ~AR3300.bcs~ ~Blackhearts_BG1/Scripts/AR3300.baf~
-EXTEND_TOP ~AR5403.bcs~ ~Blackhearts_BG1/Scripts/AR5403.baf~
-EXTEND_TOP ~AR5402.bcs~ ~Blackhearts_BG1/Scripts/AR5402.baf~
-EXTEND_TOP ~AR5401.bcs~ ~Blackhearts_BG1/Scripts/AR5401.baf~
-EXTEND_TOP ~AR2700.bcs~ ~Blackhearts_BG1/Scripts/AR2700.baf~
 EXTEND_TOP ~WISIGHT.bcs~ ~Blackhearts_BG1/Scripts/GENTLSUM.baf~
-EXTEND_TOP ~AR2800.bcs~ ~Blackhearts_BG1/Scripts/AR2800.baf~
 EXTEND_TOP ~PRESFIEL.bcs~ ~Blackhearts_BG1/Scripts/PRESFIEL.baf~
-EXTEND_TOP ~AR0800.bcs~ ~Blackhearts_BG1/Scripts/AR0800.baf~
-EXTEND_TOP ~AR0705.bcs~ ~Blackhearts_BG1/Scripts/AR0705.baf~
-EXTEND_TOP ~AR0706.bcs~ ~Blackhearts_BG1/Scripts/AR0706.baf~
-EXTEND_TOP ~AR1600.bcs~ ~Blackhearts_BG1/Scripts/AR1600.baf~
-EXTEND_TOP ~AR2400.bcs~ ~Blackhearts_BG1/Scripts/AR2400.baf~
-EXTEND_TOP ~AR0119.bcs~ ~Blackhearts_BG1/Scripts/AR0119.baf~
-EXTEND_TOP ~AR0167.bcs~ ~Blackhearts_BG1/Scripts/AR0167.baf~
-EXTEND_TOP ~AR0700.bcs~ ~Blackhearts_BG1/Scripts/AR0700.baf~
-EXTEND_TOP ~AR1208.bcs~ ~Blackhearts_BG1/Scripts/AR1208.baf~
-EXTEND_TOP ~AR0226.bcs~ ~Blackhearts_BG1/Scripts/AR0226.baf~
-EXTEND_TOP ~WI0008.bcs~ ~Blackhearts_BG1/Scripts/WI0008.baf~
-EXTEND_TOP ~WI0009.bcs~ ~Blackhearts_BG1/Scripts/WI0009.baf~
-EXTEND_TOP ~WI0010.bcs~ ~Blackhearts_BG1/Scripts/WI0010.baf~
 
 APPEND ~mastarea.2da~
 ~WI0003  value~

@@ -305,8 +305,23 @@ EXTEND_BOTTOM KEEPER 1
 END
 
 // Firebeard Interjections
+EXTEND_TOP FIREBE 2
++~Global("BHBG1Quest","GLOBAL",4) Global("KnowEroBook","GLOBAL",1) !PartyHasItem("WIBOOK02")~ + @2768 + WIFireb1
+END
 
 EXTEND_TOP FIREBE 4
++~Global("BHBG1Quest","GLOBAL",4) Global("KnowEroBook","GLOBAL",1) !PartyHasItem("WIBOOK02")~ + @2768 + WIFireb1
+END
+
+EXTEND_TOP FIREBE 3
++~Global("BHBG1Quest","GLOBAL",4) Global("KnowEroBook","GLOBAL",1) !PartyHasItem("WIBOOK02")~ + @2768 + WIFireb1
+END
+
+EXTEND_TOP FIREBE 5
++~Global("BHBG1Quest","GLOBAL",4) Global("KnowEroBook","GLOBAL",1) !PartyHasItem("WIBOOK02")~ + @2768 + WIFireb1
+END
+
+EXTEND_TOP FIREBE 6
 +~Global("BHBG1Quest","GLOBAL",4) Global("KnowEroBook","GLOBAL",1) !PartyHasItem("WIBOOK02")~ + @2768 + WIFireb1
 END
 
